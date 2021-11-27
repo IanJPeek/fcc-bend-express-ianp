@@ -20,7 +20,7 @@ app.use("/public",express.static(middlewarePath))
 
   app.get("/json", function(req, res) {
     // res.sendFile(absolutePath);
-    process.env.MESSAGE_STYLE === "uppercase"
+    process.env.MESSAGE_STYLE==="uppercase"
       ? res.json(upperReqObj)
       : res.json(reqObj)
   });
