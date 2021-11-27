@@ -12,8 +12,8 @@ const reqObj = {
 const upperReqObj = {
   "message": "HELLO JSON"
 }
-const eg = process.env.MESSAGE_STYLE
-console.log("eg", eg)
+// const eg = process.env.MESSAGE_STYLE
+// console.log("eg", eg)
 
 // console.log(middlewarePath)
 // console.log(process.env.MESSAGE_STYLE)
@@ -27,7 +27,9 @@ app.use("/public",express.static(middlewarePath))
 
   app.get("/json", function(req, res) {
     // res.sendFile(absolutePath);
-    eg === "uppercase" ? res.json(upperReqObj) : res.json(reqObj)
+    process.env.MESSAGE_STYLE === "uppercase"
+      ? res.json(upperReqObj)
+      : res.json(reqObj);
   });
 
 
