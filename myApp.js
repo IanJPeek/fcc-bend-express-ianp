@@ -13,13 +13,17 @@ const upperReqObj = {
   "message": "HELLO JSON"
 }
 const eg = process.env.MESSAGE_STYLE
-console.log("eg")
+console.log("eg", eg)
 
 // console.log(middlewarePath)
 // console.log(process.env.MESSAGE_STYLE)
 // console.log(process.env);
 
 app.use("/public",express.static(middlewarePath))
+
+  app.get("/", function(req,res){
+    res.sendFile(absolutePath)
+  })
 
   app.get("/json", function(req, res) {
     // res.sendFile(absolutePath);
