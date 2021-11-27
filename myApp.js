@@ -14,15 +14,14 @@ const upperReqObj = {
 }
 
 // console.log(middlewarePath)
-console.log(process.env.MESSAGE_STYLE)
+// console.log(process.env.MESSAGE_STYLE)
+// console.log(process.env);
 
 app.use("/public",express.static(middlewarePath))
 
   app.get("/json", function(req, res) {
     // res.sendFile(absolutePath);
-    process.env.MESSAGE_STYLE==="uppercase"
-      ? res.json(upperReqObj)
-      : res.json(reqObj)
+    process.env.MESSAGE_STYLE === "uppercase" ? res.json(upperReqObj) : res.json(reqObj)
   });
 
 
