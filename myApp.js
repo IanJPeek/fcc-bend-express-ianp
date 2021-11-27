@@ -14,6 +14,7 @@ const upperReqObj = {
 }
 
 // console.log(middlewarePath)
+console.log(process.env.MESSAGE_STYLE)
 
 app.use("/public",express.static(middlewarePath))
 
