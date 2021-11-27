@@ -6,9 +6,9 @@ console.log("Hello World")
 const absolutePath = __dirname + "/views/index.html";
 const middlewarePath = __dirname + "/public";
 
-console.log(middlewarePath)
+// console.log(middlewarePath)
 
-app.use(express.static(middlewarePath))
+app.use(middlewarePath, express.static())
 
   app.get("/", function(req, res) {
     res.sendFile(absolutePath);
