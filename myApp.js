@@ -8,7 +8,7 @@ const middlewarePath = __dirname + "/public";
 
 // console.log(middlewarePath)
 
-app.use(express.static(middlewarePath))
+app.use("/public",express.static(middlewarePath))
 
   app.get("/", function(req, res) {
     res.sendFile(absolutePath);
