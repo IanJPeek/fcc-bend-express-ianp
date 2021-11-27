@@ -6,7 +6,7 @@ console.log("Hello World")
 const absolutePath = __dirname + "/views/index.html";
 const middlewarePath = __dirname + "/public";
 
-console.log
+// console.log
 
 app.use(express.static(middlewarePath))
 
