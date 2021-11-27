@@ -1,5 +1,13 @@
 {
 	"name": "fcc-learn-node-with-express",
+	"author": "Ian Peek",
+	"description": "Free Code Camp backend api course",
+	"keywords": [
+		"freecodecamp",
+		"backend",
+		"api"
+	],
+	"license": "MIT",
 	"version": "0.1.0",
 	"dependencies": {
 		"express": "^4.14.0",
@@ -10,5 +18,9 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://idontknow/todo.git"
 	}
 }
